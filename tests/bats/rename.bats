@@ -7,7 +7,8 @@
 load _helper
 
 setup() {
-  export CUR_DIR="$(pwd)"
+  CUR_DIR="$(pwd)"
+  export CUR_DIR
 
   # Root build directory where all fixture directories are located.
   export BUILD_DIR="${BUILD_DIR:-"${BATS_TEST_TMPDIR}/drupal-module-renamer-$(random_string)"}"
