@@ -9,7 +9,7 @@
 
 [![GitHub Issues](https://img.shields.io/github/issues/drevops/drupal-module-renamer.svg)](https://github.com/drevops/drupal-module-renamer/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/drevops/drupal-module-renamer.svg)](https://github.com/drevops/drupal-module-renamer/pulls)
-[![CircleCI](https://circleci.com/gh/drevops/drupal-module-renamer/tree/master.svg?style=shield)](https://circleci.com/gh/drevops/drupal-module-renamer/tree/master)
+[![Test](https://github.com/drevops/drupal-module-renamer/actions/workflows/test.yml/badge.svg)](https://github.com/drevops/drupal-module-renamer/actions/workflows/test.yml)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/drevops/drupal-module-renamer)
 ![LICENSE](https://img.shields.io/github/license/drevops/drupal-module-renamer)
 ![Renovate](https://img.shields.io/badge/renovate-enabled-green?logo=renovatebot)
