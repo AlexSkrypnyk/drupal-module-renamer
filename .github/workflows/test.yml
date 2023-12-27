@@ -3,17 +3,25 @@ name: Test
 on:
   pull_request:
     branches:
-      - main
+      - master
       - 'feature/**'
   push:
     branches:
-      - main
+      - master
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: luizm/action-sh-checker@v0.8.0
-      env:
-        SHFMT_OPTS: -i 2 -ci -s -d
+      - uses: actions/checkout@v4
+      - name: Lint
+        uses: luizm/action-sh-checker@v0.8.0
+        env:
+          SHFMT_OPTS: -i 2 -ci -s -d
+      - name: Test
+        run: |
+          git clone https://github.com/bats-core/bats-core.git
+          cd bats-core
+          sudo ./install.sh /usr/local
+          cd ..
+          bats -p tests/bats/rename.bats
