@@ -24,4 +24,4 @@ jobs:
           cd bats-core
           sudo ./install.sh /usr/local
           cd ..
-          bats tests/bats/rename.bats
+          bats --tap tests/bats/rename.bats
