@@ -22,5 +22,5 @@ jobs:
       - uses: actions/setup-node@v4
       - name: Test
         run: |
-          npm ci
+          npm i --dev bats
           npm run test
