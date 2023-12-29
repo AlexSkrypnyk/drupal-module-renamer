@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "bats": "^1.10.0"
-  },
-  "scripts": {
-    "test": "which bats && bats tests/bats/rename.bats"
-  }
-}

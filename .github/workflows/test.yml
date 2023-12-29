@@ -22,5 +22,5 @@ jobs:
       - uses: actions/setup-node@v4
       - name: Test
         run: |
-          npm i --dev bats
-          npm run test
+          npm i --save-dev bats
+          npm run test --script "bats tests/bats/rename.bats"
