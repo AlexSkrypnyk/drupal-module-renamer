@@ -18,12 +18,7 @@
 
 ---
 
-<p align="center"> Helper script to rename a Drupal module.</p>
-
-
-## Features
-
-- Helper script to rename a Drupal module
+<p align="center"> Script to rename a Drupal module.</p>
 
 ## Download
 
