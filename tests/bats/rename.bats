@@ -6,23 +6,6 @@
 
 load _helper
 
-setup() {
-  CUR_DIR="$(pwd)"
-  export CUR_DIR
-
-  # Root build directory where all fixture directories are located.
-  export BUILD_DIR="${BUILD_DIR:-"${BATS_TEST_TMPDIR}/drupal-module-renamer-$(random_string)"}"
-
-  # Fixture directory for bats fixtures.
-  export FIXTURE_DIR="${BUILD_DIR}/bats-fixture"
-
-  prepare_fixture_dir "${BUILD_DIR}"
-  prepare_fixture_dir "${FIXTURE_DIR}"
-  cp -Rf "${CUR_DIR}/tests/fixtures/." "${FIXTURE_DIR}/"
-
-  echo "BUILD_DIR dir: ${BUILD_DIR}" >&3
-}
-
 @test "Rename" {
   assert_dir_exists "${FIXTURE_DIR}/ys_core"
   assert_file_exists "${FIXTURE_DIR}/ys_core/ys_core.info.yml"

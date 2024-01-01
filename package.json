@@ -1,6 +1,10 @@
 {
+  "name": "dsrupal-module-renamer-tests",
+  "version": "1.0.0",
+  "description": "Packages used for testing",
+  "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "bats": "^1.10.0"
+    "bats-helpers": "npm:@drevops/bats-helpers@^1.2"
   },
   "scripts": {
     "test": "bats tests/bats/rename.bats"
