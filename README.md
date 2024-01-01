@@ -25,21 +25,14 @@
 
 - Helper script to rename a Drupal module
 
-## Installation
+## Download
 
-
-    git clone git@github.com:AlexSkrypnyk/drupal-module-renamer.git
-
-Or
-
-    git clone https://github.com/AlexSkrypnyk/drupal-module-renamer.git
-
+```bash
+curl -SsL https://github.com/AlexSkrypnyk/drupal-module-renamer/raw/main/drupal-module-renamer.sh > drupal-module-renamer.sh
+```
 
 ## Usage
 
-
-    drupal-module-renamer.sh /path/to/dir "old_name" "old_prefix" "new_name" "new_prefix"
-
-
-
-## Maintenance
+```bash
+bash drupal-module-renamer.sh /path/to/dir "old_name" "old_prefix" "new_name" "new_prefix"
+```
