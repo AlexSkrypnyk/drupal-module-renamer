@@ -34,8 +34,8 @@ replace_string_content() {
     --exclude-dir="vendor" \
     --exclude-dir="node_modules" \
     --exclude-dir=".data" \
-    -l "${needle}" "${dir}" \
-    | xargs sed "${sed_opts[@]}" "s@$needle@$replacement@g"
+    -l "${needle}" "${dir}" |
+    xargs sed "${sed_opts[@]}" "s@$needle@$replacement@g"
 }
 
 replace_string_filename() {

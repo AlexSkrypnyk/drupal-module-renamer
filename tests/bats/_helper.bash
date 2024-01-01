@@ -465,7 +465,7 @@ read_env() {
   # shellcheck disable=SC1090,SC1091
   [ -f "./.env" ] && t=$(mktemp) && export -p >"$t" && set -a && . "./.env" && set +a && . "$t" && rm "$t" && unset t
 
-  eval echo "${@}"
+  echo "${@}"
 }
 
 # Trim the last line of the file.
