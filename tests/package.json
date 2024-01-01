@@ -7,6 +7,6 @@
     "bats-helpers": "npm:@drevops/bats-helpers@^1.2"
   },
   "scripts": {
-    "test": "bats tests/bats/rename.bats"
+    "test": "bats --no-tempdir-cleanup rename.bats"
   }
 }

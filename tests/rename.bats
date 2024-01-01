@@ -6,6 +6,8 @@
 
 load _helper
 
+export BATS_FIXTURE_EXPORT_CODEBASE_ENABLED=1
+
 @test "Rename" {
   assert_dir_exists "${FIXTURE_DIR}/ys_core"
   assert_file_exists "${FIXTURE_DIR}/ys_core/ys_core.info.yml"
@@ -28,7 +30,7 @@ load _helper
   assert_file_contains "${FIXTURE_DIR}/ys_core/tests/src/Functional/YsCoreExampleFunctionalTest.php" "YsCoreExampleFunctionalTest"
   assert_file_contains "${FIXTURE_DIR}/ys_core/tests/src/Functional/YsCoreFunctionalTestBase.php" "YsCoreFunctionalTestBase"
 
-  run ./drupal-module-renamer.sh "${FIXTURE_DIR}" "ys_core" "Ys" "sw_core" "Sw"
+  run "${BUILD_DIR}/drupal-module-renamer.sh" "${FIXTURE_DIR}" "ys_core" "Ys" "sw_core" "Sw"
   assert_success
 
   assert_output_contains "${FIXTURE_DIR}"

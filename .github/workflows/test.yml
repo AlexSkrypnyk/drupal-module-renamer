@@ -19,7 +19,5 @@ jobs:
         env:
           SHFMT_OPTS: -i 2 -ci -s -d
       - uses: actions/setup-node@v4
-      - name: Test
-        run: |
-          npm install
-          npm run test
+      - run: npm --prefix=tests ci
+      - run: npm --prefix=tests run test

@@ -14,7 +14,7 @@ setup() {
   # @see https://bats-core.readthedocs.io/en/stable/writing-tests.html#special-variables
 
   # Register a path to libraries.
-  export BATS_LIB_PATH="${BATS_TEST_DIRNAME}/../../node_modules"
+  export BATS_LIB_PATH="${BATS_TEST_DIRNAME}/node_modules"
 
   # Load 'bats-helpers' library.
   bats_load_library bats-helpers
@@ -36,8 +36,12 @@ setup() {
   # Fixture directory for bats fixtures.
   export FIXTURE_DIR="${BUILD_DIR}/bats-fixture"
 
+  # Copy code at the last commit.
+  fixture_prepare_dir "${BUILD_DIR}"
+  fixture_export_codebase "${BUILD_DIR}" "${CUR_DIR}/.."
+
   fixture_prepare_dir "${FIXTURE_DIR}"
-  cp -Rf "${CUR_DIR}/tests/fixtures/." "${FIXTURE_DIR}/"
+  cp -Rf "${CUR_DIR}/fixtures/." "${FIXTURE_DIR}/"
 
   echo "BUILD_DIR dir: ${BUILD_DIR}" >&3
 }

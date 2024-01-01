@@ -31,3 +31,11 @@ curl -SsL https://github.com/AlexSkrypnyk/drupal-module-renamer/raw/main/drupal-
 ```bash
 bash drupal-module-renamer.sh /path/to/dir "old_name" "old_prefix" "new_name" "new_prefix"
 ```
+
+## Maintenance
+
+```bash
+npm --prefix=tests ci
+
+npm --prefix=tests run test
+```
