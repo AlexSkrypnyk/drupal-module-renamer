@@ -31,3 +31,6 @@ curl -SsL https://github.com/AlexSkrypnyk/drupal-module-renamer/raw/main/drupal-
 ```bash
 bash drupal-module-renamer.sh /path/to/dir "old_name" "old_prefix" "new_name" "new_prefix"
 ```
+
+---
+Repository created using https://getscaffold.dev/ project scaffold template
